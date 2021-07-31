@@ -1,5 +1,5 @@
 # arpc  
-a node RPC library base on socket.io
+a node RPC library based on socket.io
 
 ## examples  
 
