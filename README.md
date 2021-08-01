@@ -51,8 +51,8 @@ server.createService('test', {
   - `createService(name, obj, onConnect, onDisconnect)`
     - `name: string` the name of the service we create
     - `obj: any` the object we provide for the remote calling
-    - `onConnected: (object: Promise) => undefined`  the function which will be called when a client connects
-    - `onDisconnect: (socket: Socket, reason: string) => undefined` the function which will be called when a client disconnects
+    - `onConnected: (object: Promise) => undefined` (optional) the function which will be called when a client connects
+    - `onDisconnect: (socket: Socket, reason: string) => undefined` (optional) the function which will be called when a client disconnects
   - `getServer(obj = null)` creates a remote object from the server
     - paramaters
       - `obj: any` the object we provide for the remote calling
