@@ -56,7 +56,6 @@ handleMessage = (data, conn, services, cb) ->
       res = await value.apply null, data.args
       cb { type: 'ok', value: res}
 
-
 module.exports = class RPC
   services: new Map()
   connected: (conn, name = 'server') =>
@@ -66,5 +65,12 @@ module.exports = class RPC
         await handleMessage(data, conn, @services, cb)
       catch e
         cb { type: 'error', message: e.toString() }
-  createService: (name, obj, onConn) => @services.set name, [obj, onConn]
-  getServer: (obj = null) => prochain.wrap new Promise (rev) => @services.set 'server', [obj, rev]
+    conn.on 'disconnect', (reason) => @services.get(conn.name)?[2]? conn, reason
+  createService: (name, obj, onConnect, onDisconnect) =>
+    @services.set name, [
+      obj
+      (obj) -> onConnect prochain.wrap new Promise (rev) -> rev obj
+      onDisconnect
+    ]
+  getServer: (obj = null) =>
+    return prochain.wrap new Promise (rev) => @services.set 'server', [obj, rev]
