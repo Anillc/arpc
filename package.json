@@ -4,7 +4,7 @@
   "description": "a node RPC library base on socket.io",
   "repository": "https://github.com/Anillc/arpc.git",
   "main": "lib/rpc.js",
-  "typings": "types/*.d.ts",
+  "typings": "types/index.d.ts",
   "author": "anillc",
   "license": "MIT",
   "files": [
