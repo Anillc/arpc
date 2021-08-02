@@ -1,15 +1,18 @@
 {
   "name": "arpc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a node RPC library base on socket.io",
-  "main": "lib/rpc.js",
   "repository": "https://github.com/Anillc/arpc.git",
+  "main": "lib/rpc.js",
+  "typings": "types/*.d.ts",
   "author": "anillc",
   "license": "MIT",
   "files": [
     "lib/",
     "client.js",
-    "server.js"
+    "server.js",
+    "client.d.ts",
+    "server.d.ts"
   ],
   "scripts": {
     "build": "coffee -o lib -c src"
