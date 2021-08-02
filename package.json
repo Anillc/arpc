@@ -9,10 +9,9 @@
   "license": "MIT",
   "files": [
     "lib/",
+    "types/",
     "client.js",
-    "server.js",
-    "client.d.ts",
-    "server.d.ts"
+    "server.js"
   ],
   "scripts": {
     "build": "coffee -o lib -c src"
