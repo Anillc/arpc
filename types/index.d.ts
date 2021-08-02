@@ -1,16 +1,14 @@
-interface TheObject {
-    [name: string]: AObject
-    (...args: any[]): AObject
-}
-type AObject = TheObject & Promise<string | number | boolean>
-
 type Socket = import('socket.io').Socket | import('socket.io-client').Socket
+type RemoteObject = {
+    [name: string]: RemoteObject
+    (...args: any[]): RemoteObject
+} & Promise<string | number | boolean>
 
 declare class RPC {
-    services: Map<string, [any, (obj: AObject) => undefined, (conn: Socket, reason: string) => undefined]>
+    services: Map<string, [any, (obj: RemoteObject) => undefined, (conn: Socket, reason: string) => undefined]>
     connected(conn: Socket, name?: string): undefined
-    createService(name: string, obj: any, onConnect?: (obj: AObject) => undefined, onDisconnect?: (conn: Socket, reason: string) => undefined): undefined
-    getServer(obj?: any): AObject
+    createService(name: string, obj: any, onConnect?: (obj: RemoteObject) => undefined, onDisconnect?: (conn: Socket, reason: string) => undefined): undefined
+    getServer(obj?: any): RemoteObject
 }
 
 declare module 'arpc' {
@@ -18,8 +16,8 @@ declare module 'arpc' {
 }
 
 declare module 'arpc/client' {
-    function client(socket: Socket, name: string, obj?: any, path?: string): AObject
-    function client(url: string, name: string, obj?: any, path?: string): AObject
+    function client(socket: Socket, name: string, obj?: any, path?: string): RemoteObject
+    function client(url: string, name: string, obj?: any, path?: string): RemoteObject
     export = client
 }
 
