@@ -1,6 +1,6 @@
 {
   "name": "arpc",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a node RPC library base on socket.io",
   "repository": "https://github.com/Anillc/arpc.git",
   "main": "lib/rpc.js",
