@@ -5,9 +5,9 @@ type RemoteObject = {
 } & Promise<string | number | boolean>
 
 declare class RPC {
-    services: Map<string, [any, (obj: RemoteObject) => undefined, (conn: Socket, reason: string) => undefined]>
-    connected(conn: Socket, name?: string): undefined
-    createService(name: string, obj: any, onConnect?: (obj: RemoteObject) => undefined, onDisconnect?: (conn: Socket, reason: string) => undefined): undefined
+    services: Map<string, [any, (obj: RemoteObject) => void, (conn: Socket, reason: string) => void]>
+    connected(conn: Socket, name?: string): void
+    createService(name: string, obj: any, onConnect?: (obj: RemoteObject) => void, onDisconnect?: (conn: Socket, reason: string) => void): void
     getServer(obj?: any): RemoteObject
 }
 
