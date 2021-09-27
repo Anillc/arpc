@@ -17,6 +17,8 @@
     "build": "coffee -o lib -c src"
   },
   "devDependencies": {
+    "@types/lodash.get": "^4.4.6",
+    "@types/lodash.set": "^4.3.6",
     "coffeescript": "^2.5.1"
   },
   "dependencies": {

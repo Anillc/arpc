@@ -17,6 +17,25 @@
   resolved "https://registry.nlark.com/@types/cors/download/@types/cors-2.8.12.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fcors%2Fdownload%2F%40types%2Fcors-2.8.12.tgz#6b2c510a7ad7039e98e7b8d3d6598f4359e5c080"
   integrity sha1-ayxRCnrXA56Y57jT1lmPQ1nlwIA=
 
+"@types/lodash.get@^4.4.6":
+  version "4.4.6"
+  resolved "https://registry.nlark.com/@types/lodash.get/download/@types/lodash.get-4.4.6.tgz#0c7ac56243dae0f9f09ab6f75b29471e2e777240"
+  integrity sha1-DHrFYkPa4Pnwmrb3WylHHi53ckA=
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash.set@^4.3.6":
+  version "4.3.6"
+  resolved "https://registry.nlark.com/@types/lodash.set/download/@types/lodash.set-4.3.6.tgz?cache=0&sync_timestamp=1629708514635&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Flodash.set%2Fdownload%2F%40types%2Flodash.set-4.3.6.tgz#33e635c2323f855359225df6a5c8c6f1f1908264"
+  integrity sha1-M+Y1wjI/hVNZIl32pcjG8fGQgmQ=
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.174"
+  resolved "https://registry.npmmirror.com/@types/lodash/download/@types/lodash-4.14.174.tgz#b4b06b6eced9850eed6b6a8f1abdd0f5192803c1"
+  integrity sha1-tLBrbs7ZhQ7ta2qPGr3Q9RkoA8E=
+
 "@types/node@>=10.0.0":
   version "16.4.8"
   resolved "https://registry.nlark.com/@types/node/download/@types/node-16.4.8.tgz#ef4974f47524448428542365db2fe7b638f928e5"
